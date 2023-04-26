@@ -8,9 +8,11 @@
                 <div>Recent Post</div>
             </div>
         </div>
-        <div class="bottom-footer container d-flex justify-content-between">
-            <div class="d-flex">bottom-footer sinistra</div>
-            <div class="d-flex">bottom-footer destra</div>
+        <div class="bottom-footer">
+            <div class="container d-flex justify-content-between">
+                <div class="d-flex">bottom-footer sinistra</div>
+                <div class="d-flex">bottom-footer destra</div>
+            </div>
         </div>
     </footer>
 </template>

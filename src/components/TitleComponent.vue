@@ -16,6 +16,6 @@
     @use '../assets/partials/variables' as *;
     div{
         border-left: 2px solid $my-contrast;
-        border-bottom: 0.2px solid rgba($color: #ffffff, $alpha: 0.4);
+        border-bottom: 0.2px solid $my-border;
     }
 </style>
