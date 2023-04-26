@@ -1,16 +1,12 @@
 <template>
     <header class="py-4">
         <div class="container d-flex  align-items-center justify-content-between pt-2 top-header">
-            <div class="d-flex">
+            <div class="d-flex align-items-center">
                 <i class="fa-regular pe-2 fa-envelope"></i>
                 <span>Superhit Top Movie </span>
                 <span class="my-contrast">**King Star**</span>
-                <ul class="d-flex ps-3 list-unstyled">
-                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-google-plus-g"></i></a></li>
+                <ul class="d-flex align-items-end ps-3 m-0 list-unstyled">
+                    <li v-for="brand in brands"><a href="#"><i :class="brand" class="fa-brands"></i></a></li>
                 </ul>
             </div>
             <div>
@@ -31,13 +27,8 @@
         <hr>
         <nav class="container pb-2 d-flex justify-content-between bottom-header">
             <ul class="d-flex list-unstyled">
-                <li><a href="#">Home <i class="fa-solid fa-caret-down"></i></a></li>
-                <li><a href="#">Celebrity <i class="fa-solid fa-caret-down"></i></a></li>
-                <li><a href="#">Movie <i class="fa-solid fa-caret-down"></i></a></li>
-                <li><a href="#">Page <i class="fa-solid fa-caret-down"></i></a></li>
-                <li><a href="#">Shop <i class="fa-solid fa-caret-down"></i></a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact Us</a></li>
+
+                <li v-for="link in navLinks"><a href="#">{{link.title}} <i v-if="link.caret" class="fa-solid fa-caret-down"></i></a></li>
             </ul>
             <div>
                 <i class="fa-solid position-relative fa-basket-shopping">
@@ -61,7 +52,8 @@
 
 <script>
     export default {
-        name: 'HeaderComponent'
+        name: 'HeaderComponent',
+        props: ['brands', 'navLinks']
     }
 </script>
 
