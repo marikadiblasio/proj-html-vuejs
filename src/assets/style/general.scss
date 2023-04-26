@@ -1,6 +1,11 @@
-@use '../partials/variables';
+@use '../partials/variables' as * ;
 @import 'bootstrap/scss/bootstrap.scss';
 
 $fa-font-path: './webfonts';
 @import '@fortawesome/fontawesome-free/scss/fontawesome.scss';
 @import '@fortawesome/fontawesome-free/scss/solid.scss';
+
+body{
+    background-color: $my-primary;
+    color: $my-tertiary;
+}

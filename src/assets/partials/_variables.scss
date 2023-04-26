@@ -1,0 +1,10 @@
+$my-primary: #182028;
+$my-secondary: #060F19;
+$my-contrast: #13bE13;
+$my-tertiary: #FFFFFF;
+
+//Mixin
+@mixin small-square{
+    width: 2rem;
+    height: 2rem;
+}
