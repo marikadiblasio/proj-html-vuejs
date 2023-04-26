@@ -9,7 +9,7 @@
                     <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
                     <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
                     <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
                     <li><a href="#"><i class="fa-brands fa-google-plus-g"></i></a></li>
                 </ul>
             </div>
@@ -48,10 +48,13 @@
             </div>
         </nav>
         <div class="hero py-5">
-            <div class="container w-50 me-5">
-                hero
+            <div class="container text-center">
+                <h5>Welcome To Our Movie Site</h5>
+                <h2 class="text-uppercase">Our Special <span class="my-contrast">Movies</span></h2>
+                <p>Lorem ispum is simpl dummy text of the printing and typesetting industrioy. Lorem ipsum hes been the industry standerd dummy text ever since the 1500s, when an unknown</p>
+                <button class="btn rounded-5">Read more</button>
             </div>
-            <div class="cip ms-auto me-4">&angle;</div>
+            <div class="extra ms-auto me-4"><i class="fa-solid fa-angle-up"></i></div>
         </div>
     </header>
 </template>
@@ -63,39 +66,24 @@
 </script>
 
 <style lang="scss" scoped>
-@use '../assets/partials/variables' as *;
-a{
-    color: $my-tertiary;
-    text-decoration: none;
-}     
-li{
-    padding-left: 1rem;
-}
-        .fa-facebook-f{
-            color: #3b5998;
-        }
-        .fa-twitter{
-            color: #00acee;
-        }
-        .fa-linkedin-in{
-            color: #0d6c99;
-        }
-        .fa-instagram{
-            color: #691822;
-        }
-        .fa-google-plus-g{
-            color: #da4a39;
-        }
+    @use '../assets/partials/variables' as *;
+    a{
+        color: $my-tertiary;
+        text-decoration: none;
+    }     
+    li{
+        padding-left: 1rem;
+    }
     hr{
         color: $my-border;
         background-color: $my-border;
         border: 1px solid $my-border;
     }
-    .main-header{
-        .btn{
+    .btn{
             color: $my-tertiary;
             background-color: $my-contrast;
         }
+    .main-header{
         input{
             background-color: $my-primary;
             border-color: $my-border;
@@ -113,13 +101,18 @@ li{
         background-image: url('/imgs/assets/slider.jpg');
         background-position: center;
         background-size: cover;
+        .container{
+            width: 30%;
+            margin-right: 15%;
+        }
     }
-    .cip{
+    .extra{
         // @include small-square;
         background-color: $my-tertiary;
         width: 2rem;
         height: 2rem;
         color: grey;
         text-align: center;
+        line-height: 2rem;
     }
 </style>
