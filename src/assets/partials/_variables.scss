@@ -9,3 +9,7 @@ $my-border: #223241;
     width: 2rem;
     height: 2rem;
 }
+@mixin my-square{
+    width: 5rem;
+    height: 5rem;
+}

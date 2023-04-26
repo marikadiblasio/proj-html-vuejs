@@ -5,7 +5,7 @@
                 <i class="fa-regular pe-2 fa-envelope"></i>
                 <span>Superhit Top Movie </span>
                 <span class="my-contrast">**King Star**</span>
-                <ul class="d-flex align-items-end ps-3 m-0 list-unstyled">
+                <ul class="d-flex align-items-end ps-3 m-0">
                     <li v-for="brand in brands"><a href="#"><i :class="brand" class="fa-brands"></i></a></li>
                 </ul>
             </div>
@@ -26,7 +26,7 @@
         </div>
         <hr>
         <nav class="container pb-2 d-flex justify-content-between bottom-header">
-            <ul class="d-flex list-unstyled">
+            <ul class="d-flex">
 
                 <li v-for="link in navLinks"><a href="#">{{link.title}} <i v-if="link.caret" class="fa-solid fa-caret-down"></i></a></li>
             </ul>
@@ -58,11 +58,7 @@
 </script>
 
 <style lang="scss" scoped>
-    @use '../assets/partials/variables' as *;
-    a{
-        color: $my-tertiary;
-        text-decoration: none;
-    }     
+    @use '../assets/partials/variables' as *;     
     li{
         padding-left: 1rem;
     }

@@ -11,6 +11,17 @@ body{
     background-color: $my-primary;
     color: $my-tertiary;
 }
+ul {
+    list-style: none;
+}
+a {
+    color: $my-tertiary;
+    text-decoration: none;
+    // cursor: pointer;
+}
+.pointer{
+    cursor: pointer;
+}
  //Color
 .my-contrast{
     color: $my-contrast;

@@ -1,7 +1,7 @@
 <template>
   <HeaderComponent :brands="brands" :navLinks="navLinks"/>
   <MainComponent />
-  <FooterComponent />
+  <FooterComponent  :bottomLinks="bottomLinks" :movieCategories="movieCategories" :informations="informations"/>
 </template>
 
 <script>
@@ -51,7 +51,24 @@
               title: 'Contact Us',
               caret: false
             }
-        ]
+        ],
+        bottomLinks: [ 
+          {
+            refName: 'Tram And Conditions',
+            ref: '#'
+          },
+          {
+            refName: 'Policy',
+            ref: '#'
+          },
+          {
+            refName: 'About',
+            ref: '#'
+          }
+        ],
+        movieCategories: [ 'English New Movie', 'Hindi All Movie', 'Latest Tamil Movie', 'Homn New Movie', 'Animation New Movie'],
+        informations: [ 'Youtube Video Post', 'Actor Information', 'New Promotion', 'Latest Movie in English', 'Latest Film Product', 'video New Video'],
+
       }
     }
   }
