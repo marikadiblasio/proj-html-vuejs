@@ -8,10 +8,7 @@
             <div class="card-bottom">
                 <h4 class="ps-2">{{show.title}}</h4>
                 <span class="ps-2">Category: {{ show.category }}</span>
-                <div class="d-flex pt-3 justify-content-between">
-                    <a href="#" class="card-tag">Details</a>
-                    <a href="#" class="card-tag">Views {{ show.views }}</a>
-                </div>
+                <ButtonsComponent :views="'Views ' + show.views" :shared="false"/>
             </div>
         </div>
     </div>
@@ -19,8 +16,12 @@
 
 <script>
     import { store } from '../data/store';
+    import ButtonsComponent from './ButtonsComponent.vue';
     export default {
         name: 'CardComponent',
+        components: {
+            ButtonsComponent
+        },
         props: ['show', 'index', 'rounded'],
         data(){
             return {
@@ -47,19 +48,6 @@
 
         i{
             color: $my-contrast;
-        }
-        .card-tag{
-            background-color: $my-primary;
-            padding: 5px 20px;
-            margin-bottom: 1rem;
-        }
-        .card-tag:last-child{
-            border-top-left-radius: 15px ;
-            border-bottom-left-radius: 15px ;
-        }
-        .card-tag:first-child{
-            border-top-right-radius: 15px ;
-            border-bottom-right-radius: 15px ;
         }
         &.active{
             transform: scale(1.1);

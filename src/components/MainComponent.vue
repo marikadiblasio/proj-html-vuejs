@@ -13,7 +13,8 @@
             </div>
         </div>
         <NewMovieSelect />
-        <section id="latest-news">
+        <LatestNews />
+        <!-- <section id="latest-news">
             <div class="container pt-5 d-flex">
                 <div class="w-50 p-2 border">
                     <div class="border">sinistra</div>
@@ -24,7 +25,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <section id="subscription" class="py-5">
             <div class="container">
                 <form></form>
@@ -38,13 +39,15 @@
     import NewMovieSlider from './NewMovieSlider.vue';
     import MoviePlaylist from './MoviePlaylist.vue';
     import NewMovieSelect from './NewMovieSelect.vue';
+    import LatestNews from './LatestNews.vue';
     export default {
         name: 'MainComponent',
         components: {
             TitleComponent,
             NewMovieSlider,
             MoviePlaylist,
-            NewMovieSelect
+            NewMovieSelect,
+            LatestNews
         }
     }
 </script>
