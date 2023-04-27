@@ -104,7 +104,7 @@ export const store = reactive({
             comments: 0,
             date: 'February 12, 2016',
             duration: '2.30.00',
-            playlist: false,
+            playlist: true,
             id: 7
         },
         {
@@ -117,7 +117,7 @@ export const store = reactive({
             comments: 0,
             date: 'February 12, 2016',
             duration: '2.30.00',
-            playlist: false,
+            playlist: true,
             id: 6
         },
     ],

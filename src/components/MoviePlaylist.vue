@@ -26,11 +26,11 @@
                         <span>Plying24</span>
                     </div>
                     <div class="playlist-container py-2">
-                        <div v-for="show in store.shows" class="d-flex py-2 align-items-center">
-                            <div class="my-square">
+                        <div v-for="show in playMovie" class="d-flex py-2 align-items-center">
+                            <div class="my-square py-2">
                                 <img :src="show.squareImage" :alt="show.title">
                             </div>
-                            <div class="ps-2">
+                            <div class="ps-2 py-2">
                                 <h6>{{ show.title }}</h6>
                                 <div>{{ show.views }} Views</div>
                                 <div class="d-flex justify-content-between">
@@ -56,6 +56,11 @@ import TitleComponent from './TitleComponent.vue';
         data(){
             return{
                 store
+            }
+        },
+        computed: {
+            playMovie(){
+                return this.store.shows.map(show => show).filter(show => show.playlist);
             }
         }
     }
