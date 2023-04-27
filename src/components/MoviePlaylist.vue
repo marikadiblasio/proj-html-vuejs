@@ -30,7 +30,7 @@
                             <div class="my-square py-2">
                                 <img :src="show.squareImage" :alt="show.title">
                             </div>
-                            <div class="ps-2 py-2">
+                            <div class="ps-2 pt-4 pb-2">
                                 <h6>{{ show.title }}</h6>
                                 <div>{{ show.views }} Views</div>
                                 <div class="d-flex justify-content-between">
@@ -70,7 +70,7 @@ import TitleComponent from './TitleComponent.vue';
     @use '../assets/partials/variables' as *;
     .video-player{
         width: 60%;
-        height: 40vh;
+        height: 45vh;
         background-color: black;
 
         h4, h6{
@@ -94,7 +94,7 @@ import TitleComponent from './TitleComponent.vue';
         }
     }
     .playlist-bar{
-        height: 40vh;
+        height: 45vh;
         width: 38%;
         background-color: $my-secondary;
 

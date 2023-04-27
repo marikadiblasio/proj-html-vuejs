@@ -3,13 +3,13 @@
         <div class="container pt-5 d-flex">
             <div class="w-50 p-2">
                 <div class="big-square">
-                    <h4 class="px-4 ">{{ store.posts[0].title }}</h4>
-                    <ButtonsComponent :views="'moviestar ' + store.posts[0].comments + 'Comment Share'" :shared="true" />
+                    <h4 class="px-4 ">{{ store.posts[activePost].title }}</h4>
+                    <ButtonsComponent :views="'moviestar ' + store.posts[activePost].comments + 'Comment Share'" :shared="true" />
                 </div>
             </div>
             <div class="w-50 p-2">
                 <div class="d-flex g-3 justify-content-between flex-wrap">
-                    <div class="smaller-square" v-for="post in slicedPosts" :style="{backgroundImage: 'url' + '(' + post.image + ')'}">
+                    <div  class="smaller-square" v-for="(post, index) in slicedPosts" :key="index" :style="{backgroundImage: 'url' + '(' + post.image + ')'}">
                         <h5 class="px-3">{{ post.title }}</h5>
                         <ButtonsComponent views="Share" :shared="true" />
                     </div>
@@ -31,7 +31,8 @@
         },
         data(){
             return{
-                store
+                store,
+                activePost: 0
             }
         },
         computed: {
@@ -95,7 +96,7 @@
             right: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0,0,0,0.9);
+            background-color: rgba(0,0,0,0.5);
             z-index: -1;
         }
     }

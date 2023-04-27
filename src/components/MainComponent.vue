@@ -14,23 +14,12 @@
         </div>
         <NewMovieSelect />
         <LatestNews />
-        <!-- <section id="latest-news">
-            <div class="container pt-5 d-flex">
-                <div class="w-50 p-2 border">
-                    <div class="border">sinistra</div>
-                </div>
-                <div class="w-50 p-2 border">
-                    <div class="border">
-                        destra
-                    </div>
-                </div>
-            </div>
-        </section> -->
-        <section id="subscription" class="py-5">
+        <SubscriptionForm />
+        <!-- <section id="subscription" class="py-5">
             <div class="container">
                 <form></form>
             </div>
-        </section>
+        </section> -->
     </div>
 </template>
 
@@ -40,6 +29,7 @@
     import MoviePlaylist from './MoviePlaylist.vue';
     import NewMovieSelect from './NewMovieSelect.vue';
     import LatestNews from './LatestNews.vue';
+    import SubscriptionForm from './SubscriptionForm.vue';
     export default {
         name: 'MainComponent',
         components: {
@@ -47,7 +37,8 @@
             NewMovieSlider,
             MoviePlaylist,
             NewMovieSelect,
-            LatestNews
+            LatestNews,
+            SubscriptionForm
         }
     }
 </script>
@@ -61,13 +52,6 @@
         .container{
             width: 30%;
             margin-right: 25%;
-        }
-    }
-    #subscription {
-        div {
-            height: 400px;
-            background-image: url('/imgs/assets/form-bg-1.png');
-            background-repeat: no-repeat;
         }
     }
 </style>
