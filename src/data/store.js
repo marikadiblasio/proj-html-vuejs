@@ -109,7 +109,7 @@ export const store = reactive({
         },
         {
             image: '/imgs/assets/5-1.jpg',
-            squareImage: '',
+            squareImage: '/imgs/assets/5-1.jpg',
             title: 'Animate Blue Strack New Movie',
             category:'Tv Series',
             voto: 0,

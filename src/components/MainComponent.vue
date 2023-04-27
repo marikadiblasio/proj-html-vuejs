@@ -1,7 +1,8 @@
 <template>
     <div>
         <NewMovieSlider />
-        <section id="movie-playlist" class="container pb-4">
+        <MoviePlaylist />
+        <!-- <section id="movie-playlist" class="container pb-4">
             <TitleComponent title="Movie Playlist" subtitle="Lorem ipsum dummy text eiusque cum dolor" />
             <div class="d-flex justify-content-between">
                 <div>
@@ -11,7 +12,7 @@
                     playlist bar
                 </div>
             </div>
-        </section>
+        </section> -->
         <div id="coming-soon" class="py-5 mb-4">
             <div class="container w-50 me-5">
                 Coming soon
@@ -57,11 +58,13 @@
 <script>
     import TitleComponent from './TitleComponent.vue';
     import NewMovieSlider from './NewMovieSlider.vue';
+    import MoviePlaylist from './MoviePlaylist.vue';
     export default {
         name: 'MainComponent',
         components: {
             TitleComponent,
-            NewMovieSlider
+            NewMovieSlider,
+            MoviePlaylist
         }
     }
 </script>
