@@ -162,5 +162,6 @@ export const store = reactive({
             comments: 0,
             date: 'April 14, 2020',    
         },
-    ]
+    ],
+    activeIndex: 1
 })

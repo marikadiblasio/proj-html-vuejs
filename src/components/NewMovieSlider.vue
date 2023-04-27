@@ -3,13 +3,14 @@
             <div class="d-flex justify-content-between pb-4">
                 <TitleComponent class="flex-grow-1" title="New Movie" subtitle="Lorem ipsum dummy text eiusque cum dolor"/>
                 <div class="d-flex">
-                    <div class="circle"><i class="fa-solid fa-chevron-left"></i></div>
-                    <div class="circle"><i class="fa-solid fa-chevron-right"></i></div>
+                    <div @click="scrollLeft" class="circle"><i class="fa-solid fa-chevron-left"></i></div>
+                    <div @click="scrollRight" class="circle"><i class="fa-solid fa-chevron-right"></i></div>
                 </div>
             </div>
-            <div class="py-5 d-flex">
-                Qui le cards
-                <CardComponent v-for="(show, index) in store.shows" :show="show" :key="show.id" :index="index"/>
+            <div class="py-5 overflow-hidden">
+                <div ref="slider" class="py-5 d-flex slider">
+                    <CardComponent @click="store.activeIndex = index" v-for="(show, index) in store.shows" :show="show" :key="show.id" :index="index"/>
+                </div>
             </div>
         </section>
 </template>
@@ -26,7 +27,37 @@
         },
         data(){
             return{
-                store
+                store,
+            }
+        },
+        methods: {
+            scrollRight() {
+                if(store.activeIndex === 0 ){
+                    store.activeIndex++;
+                    return
+                } //Da fare controlli x fine e inizio array
+                if(store.activeIndex < store.shows.length - 1){
+                    store.activeIndex++;
+                }
+                const slider = this.$refs.slider;
+                slider.scrollBy({
+                left: 375,
+                behavior: "smooth",
+	            });
+            },
+            scrollLeft() {
+                if(store.activeIndex === store.shows.length - 1){
+                    store.activeIndex--;
+                    return
+                }
+                if(store.activeIndex > 0){
+                    store.activeIndex--;
+                }
+                const slider = this.$refs.slider;
+                slider.scrollBy({
+                left: -375,
+                behavior: "smooth",
+                });
             }
         }
     }
@@ -41,5 +72,13 @@
             color: $my-contrast;
             background-color: $my-primary;
         }
+        .slider {
+            overflow-x: auto;
+            height: fit-content;
+            
+        }
+        ::-webkit-scrollbar {
+                width: 0px;
+            }
     }
 </style>

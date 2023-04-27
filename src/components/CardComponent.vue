@@ -1,6 +1,6 @@
 <template>
-    <div class="col-4 px-5">
-        <div style="background-image: url('/imgs/assets/5-1.jpg')" class="my-card rounded-4">
+    <div class="col-4 px-3 d-flex">
+        <div :style="{backgroundImage: 'url' + '(' + show.image + ')'}" :class="{'active': index === store.activeIndex} " class="my-card rounded-4">
             <div class="text-end pt-3 pe-2">
                 <i class="fa-solid fa-star"></i>
                 <span>{{ show.voto }}/10</span>
@@ -32,12 +32,14 @@
 
 <style lang="scss" scoped>
     @use '../assets/partials/variables' as *;
+    .col-4{
+        height: calc(100vw / 4);
+    }
     .my-card{
-        // background-image: url('/imgs/assets/5-1.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        height: calc(100vw / 6);
+        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -58,10 +60,12 @@
             border-top-right-radius: 15px ;
             border-bottom-right-radius: 15px ;
         }
-    }
-    .my-card:hover{
-        transform: scale(1.2);
-        filter: brightness(10%);
+        &.active{
+            transform: scale(1.2);
+            &:hover{
+                filter: brightness(10%); //da modificare!!!
+            }
+        }
     }
 
 </style>
