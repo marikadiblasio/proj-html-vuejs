@@ -66,7 +66,7 @@ export const store = reactive({
             date: 'February 12, 2016',
             duration: '2.30.00',
             playlist: false,
-            id: 4
+            id: 5
         },
         {
             image: '/imgs/assets/3-1.jpg',
@@ -79,7 +79,7 @@ export const store = reactive({
             date: 'February 12, 2016',
             duration: '2.30.00',
             playlist: true,
-            id: 5
+            id: 6
         },
         {
             image: '/imgs/assets/4.jpg',
@@ -92,7 +92,7 @@ export const store = reactive({
             date: 'February 12, 2016',
             duration: '2.30.00',
             playlist: false,
-            id: 6
+            id: 7
         },
         {
             image: '/imgs/assets/3-2.jpg',
@@ -105,7 +105,7 @@ export const store = reactive({
             date: 'February 12, 2016',
             duration: '2.30.00',
             playlist: true,
-            id: 7
+            id: 8
         },
         {
             image: '/imgs/assets/5-1.jpg',
@@ -118,7 +118,7 @@ export const store = reactive({
             date: 'February 12, 2016',
             duration: '2.30.00',
             playlist: true,
-            id: 6
+            id: 9
         },
     ],
     posts: [

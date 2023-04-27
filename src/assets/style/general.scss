@@ -19,7 +19,7 @@ a {
     text-decoration: none;
     // cursor: pointer;
 }
-a:hover {
+.activeCategory, a:hover {
     color: $my-contrast;
 }
 .pointer{

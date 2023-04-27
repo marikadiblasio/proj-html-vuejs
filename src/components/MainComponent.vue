@@ -12,25 +12,9 @@
                 </div>
             </div>
         </div>
-        <section id="new-movie-select">
-            <div class="container">
-                <TitleComponent title="New Movie" subtitle="Lorem ipsum dummy text eiusque cum dolor"/>
-                <ul class="d-flex list-unstyled pb-4">
-                    <li class="pe-4">All</li>
-                    <li class="pe-4">Coming Soon</li>
-                    <li class="pe-4">Latest Movies</li>
-                    <li class="pe-4">Top Rated</li>
-                    <li class="pe-4">TV Series</li>
-                </ul>
-                <div class="row pb-4">
-                    <div class="col-4 border p-3 border-3">
-                        <div class="image">card</div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <NewMovieSelect />
         <section id="latest-news">
-            <div class="container d-flex">
+            <div class="container pt-5 d-flex">
                 <div class="w-50 p-2 border">
                     <div class="border">sinistra</div>
                 </div>
@@ -53,12 +37,14 @@
     import TitleComponent from './TitleComponent.vue';
     import NewMovieSlider from './NewMovieSlider.vue';
     import MoviePlaylist from './MoviePlaylist.vue';
+    import NewMovieSelect from './NewMovieSelect.vue';
     export default {
         name: 'MainComponent',
         components: {
             TitleComponent,
             NewMovieSlider,
-            MoviePlaylist
+            MoviePlaylist,
+            NewMovieSelect
         }
     }
 </script>

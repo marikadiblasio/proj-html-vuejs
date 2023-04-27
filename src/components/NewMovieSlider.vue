@@ -1,15 +1,15 @@
 <template>
     <section id="new-movie-slider" class="container pb-4">
-            <div class="d-flex justify-content-between pb-4">
+            <div class="d-flex justify-content-between">
                 <TitleComponent class="flex-grow-1" title="New Movie" subtitle="Lorem ipsum dummy text eiusque cum dolor"/>
                 <div class="d-flex">
                     <div @click="scrollLeft" class="circle"><i class="fa-solid fa-chevron-left"></i></div>
                     <div @click="scrollRight" class="circle"><i class="fa-solid fa-chevron-right"></i></div>
                 </div>
             </div>
-            <div class="py-5 overflow-hidden">
-                <div ref="slider" class="py-5 d-flex slider">
-                    <CardComponent @click="store.activeIndex = index" v-for="(show, index) in store.shows" :show="show" :key="show.id" :index="index"/>
+            <div class="pt-5 pb-3 overflow-hidden">
+                <div ref="slider" class="pt-5 d-flex slider">
+                    <CardComponent @click="store.activeIndex = index" v-for="(show, index) in store.shows" :show="show" :rounded="true" :key="index" :index="index"/>
                 </div>
             </div>
         </section>
@@ -41,7 +41,7 @@
                 }
                 const slider = this.$refs.slider;
                 slider.scrollBy({
-                left: 375,
+                left: 390,
                 behavior: "smooth",
 	            });
             },
@@ -55,7 +55,7 @@
                 }
                 const slider = this.$refs.slider;
                 slider.scrollBy({
-                left: -375,
+                left: -390,
                 behavior: "smooth",
                 });
             }
