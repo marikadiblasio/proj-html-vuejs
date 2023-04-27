@@ -6,7 +6,7 @@
                     <h6>Abous Us</h6>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim tempore sint nobis nulla repudiandae qui, commodi minus. Quisquam, fuga quibusdam accusantium ad minus quod minima.</p>
                     <ul class="d-flex p-0">
-                        <li v-for="brand in newBrands"><a href="#"><i :class="brand" class="fa-brands prova"></i></a></li>
+                        <li v-for="brand in newBrands"><a href="#"><i :class="brand" class="fa-brands circle"></i></a></li>
                     </ul>
                 </div>
                 <div  class="w-25">
@@ -74,13 +74,6 @@
         background-size: cover;
         li{
             padding-bottom: 1rem;
-        }
-        .prova{
-            @include small-square;
-            text-align: center;
-            line-height: 2rem;
-            border-radius: 50%;
-            margin-left: 1.5rem;
         }
         .fa-facebook-f{
             background-color: $fb;

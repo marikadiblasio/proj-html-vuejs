@@ -1,15 +1,6 @@
 <template>
     <div>
-        main
-        <section id="new-movie-slider" class="container pb-4">
-            <div class="d-flex justify-content-between pb-4">
-                <TitleComponent class="flex-grow-1" title="New Movie" subtitle="Lorem ipsum dummy text eiusque cum dolor"/>
-                <div>angoli</div>
-            </div>
-            <div class="py-5">
-                Qui le cards
-            </div>
-        </section>
+        <NewMovieSlider />
         <section id="movie-playlist" class="container pb-4">
             <TitleComponent title="Movie Playlist" subtitle="Lorem ipsum dummy text eiusque cum dolor" />
             <div class="d-flex justify-content-between">
@@ -64,11 +55,13 @@
 </template>
 
 <script>
-    import TitleComponent from './TitleComponent.vue'
+    import TitleComponent from './TitleComponent.vue';
+    import NewMovieSlider from './NewMovieSlider.vue';
     export default {
         name: 'MainComponent',
         components: {
-            TitleComponent
+            TitleComponent,
+            NewMovieSlider
         }
     }
 </script>
