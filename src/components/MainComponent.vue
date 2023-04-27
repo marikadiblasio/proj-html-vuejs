@@ -2,20 +2,14 @@
     <div>
         <NewMovieSlider />
         <MoviePlaylist />
-        <!-- <section id="movie-playlist" class="container pb-4">
-            <TitleComponent title="Movie Playlist" subtitle="Lorem ipsum dummy text eiusque cum dolor" />
-            <div class="d-flex justify-content-between">
-                <div>
-                    video
-                </div>
-                <div>
-                    playlist bar
-                </div>
-            </div>
-        </section> -->
         <div id="coming-soon" class="py-5 mb-4">
-            <div class="container w-50 me-5">
-                Coming soon
+            <div class="container py-5 text-uppercase text-center">
+                <h5 class="my-contrast"> Coming Soon Movie</h5>
+                <h2 class="display-4">Max Still</h2>
+                <div>
+                    <h6>John Player <span class="my-contrast">&and;</span> Emily Rose</h6>
+                    <span>The Countdown Is Finished!</span>
+                </div>
             </div>
         </div>
         <section id="new-movie-select">
@@ -75,6 +69,10 @@
         background-image: url('/imgs/assets/coming-bg.jpg');
         background-position: center;
         background-size: cover;
+        .container{
+            width: 30%;
+            margin-right: 25%;
+        }
     }
     #subscription {
         div {
