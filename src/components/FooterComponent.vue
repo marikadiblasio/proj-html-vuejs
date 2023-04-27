@@ -5,6 +5,9 @@
                 <div class="w-25">
                     <h6>Abous Us</h6>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim tempore sint nobis nulla repudiandae qui, commodi minus. Quisquam, fuga quibusdam accusantium ad minus quod minima.</p>
+                    <ul class="d-flex p-0">
+                        <li v-for="brand in newBrands"><a href="#"><i :class="brand" class="fa-brands prova"></i></a></li>
+                    </ul>
                 </div>
                 <div  class="w-25">
                     <ul>
@@ -45,14 +48,20 @@
     import { store } from '../data/store';
     export default {
         name:'FooterComponent',
-        props: ['bottomLinks', 'movieCategories', 'informations'],
+        props: ['brands', 'bottomLinks', 'movieCategories', 'informations'],
         data(){
             return{
                 store
             }
         },
         computed: {
-         subPosts(){ return this.store.posts.slice(0,3)}
+            subPosts(){ 
+                return this.store.posts.slice(0,3);
+            },
+            newBrands(){
+                const plus = ['fa-pinterest-p'];
+                return this.brands.concat(plus);
+            }
         }
     }
 </script>
@@ -65,6 +74,28 @@
         background-size: cover;
         li{
             padding-bottom: 1rem;
+        }
+        .prova{
+            @include small-square;
+            text-align: center;
+            line-height: 2rem;
+            border-radius: 50%;
+            margin-left: 1.5rem;
+        }
+        .fa-facebook-f{
+            background-color: $fb;
+        }
+        .fa-twitter{
+            background-color: $twit;
+        }
+        .fa-linkedin-in{
+            background-color: $in;
+        }
+        .fa-square-instagram{
+            background-color: #c22e2a;
+        }
+        .fa-pinterest-p{
+            background-color: $pint;
         }
         h6 {
             padding-top: 2rem;

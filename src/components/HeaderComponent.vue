@@ -6,7 +6,7 @@
                 <span>Superhit Top Movie </span>
                 <span class="my-contrast">**King Star**</span>
                 <ul class="d-flex align-items-end ps-3 m-0">
-                    <li v-for="brand in brands"><a href="#"><i :class="brand" class="fa-brands"></i></a></li>
+                    <li v-for="brand in newBrands"><a href="#"><i :class="brand" class="fa-brands"></i></a></li>
                 </ul>
             </div>
             <div>
@@ -53,7 +53,13 @@
 <script>
     export default {
         name: 'HeaderComponent',
-        props: ['brands', 'navLinks']
+        props: ['brands', 'navLinks'],
+        computed: {
+            newBrands(){
+                const plus = ['fa-google-plus-g'];
+                return this.brands.concat(plus);
+            }
+        }
     }
 </script>
 
@@ -67,6 +73,21 @@
         background-color: $my-border;
         border: 1px solid $my-border;
     }
+    .fa-facebook-f{
+        color: $fb;
+    }
+    .fa-twitter{
+        color: $twit;
+    }
+    .fa-linkedin-in{
+        color: $in;
+    }
+    .fa-square-instagram{
+        color: $insta;
+    }
+    .fa-google-plus-g{
+        color: $g-plus;
+}
     .btn{
             color: $my-tertiary;
             background-color: $my-contrast;

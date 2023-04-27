@@ -1,7 +1,7 @@
 <template>
   <HeaderComponent :brands="brands" :navLinks="navLinks"/>
   <MainComponent />
-  <FooterComponent  :bottomLinks="bottomLinks" :movieCategories="movieCategories" :informations="informations"/>
+  <FooterComponent  :brands="brands" :bottomLinks="bottomLinks" :movieCategories="movieCategories" :informations="informations"/>
 </template>
 
 <script>
@@ -20,7 +20,7 @@
       return{
         store,
         brands: [
-          'fa-facebook-f', 'fa-twitter', 'fa-linkedin-in', 'fa-square-instagram', 'fa-google-plus-g'
+          'fa-facebook-f', 'fa-twitter', 'fa-linkedin-in', 'fa-square-instagram'
         ],
         navLinks:[
             {
