@@ -27,7 +27,18 @@
         <hr>
         <nav class="container pb-2 d-flex justify-content-between bottom-header">
             <ul class="d-flex">
-                <li v-for="link in navLinks"><a :href="link.ref">{{link.title}} <i v-if="link.caret" class="fa-solid fa-caret-down"></i></a></li>
+                <li class="position-relative" v-for="(link, index) in navLinks" :key="index" @click="prova">
+                    <a :href="link.ref">{{link.title}} 
+                        <i v-if="link.caret" class="fa-solid fa-caret-down"></i>
+                    </a>
+                    <div class="drop">
+                        <ul class="unstyled text-white">
+                            <li v-for="n in 6">
+                                <span>{{ link.title + n }}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
             </ul>
             <div>
                 <i class="fa-solid position-relative fa-basket-shopping">
@@ -53,17 +64,51 @@
     export default {
         name: 'HeaderComponent',
         props: ['brands', 'navLinks'],
+        data(){
+            return{
+                // activeIndex: 2
+            }
+        },
         computed: {
             newBrands(){
                 const plus = ['fa-google-plus-g'];
                 return this.brands.concat(plus);
             }
+        },
+        methods:{
+            prova(){
+                // console.log(this.index);
+
+                // this.activeIndex = this.index;
+                // console.log(this.activeIndex);
+                // console.log(this.index);
+                // console.log(this.navLinks);
+            }
+        },
+        mounted(){
+            // console.log(this.activeIndex);
         }
     }
 </script>
 
 <style lang="scss" scoped>
     @use '../assets/partials/variables' as *;     
+    .drop{
+        position: absolute;
+        left: 0;
+        top: 100%;
+        background-color: black;
+        width: 10rem;
+        height: fit-content;
+        text-align: left;
+        opacity: 0;
+    }
+    li.position-relative:hover .drop{
+        opacity: 1;
+    }
+    li.position-relative.active{
+        color: $my-contrast;
+    }
     li{
         padding-left: 1rem;
     }

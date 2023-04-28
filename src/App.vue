@@ -24,19 +24,19 @@
         ],
         navLinks:[
             {
-              title: 'Home',
-              caret: true,
-              ref: '#'
+              "title": "Home",
+              "caret": true,
+              "ref": "#"
             },
             {
-              title: 'Celebrity',
-              caret: true,
-              ref: '#'
+              "title": "Celebrity",
+              "caret": true,
+              "ref": "#"
             },
             {
-              title: 'Movie',
-              caret: true,
-              ref: '#new-movie-slider'
+              "title": "Movie",
+              "caret": true,
+              "ref": "#new-movie-slider"
             },
             {
               title: 'Page',
