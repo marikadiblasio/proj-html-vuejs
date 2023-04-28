@@ -3,40 +3,60 @@
             <div class="container">
                 <TitleComponent title="New Movie" subtitle="Lorem ipsum dummy text eiusque cum dolor"/>
                 <ul class="d-flex list-unstyled pb-5">
-                    <li @click="cip = this.store.shows.map(show => show)" class="pe-4"><a href="#">All</a></li>
-                    <li @click="cip = selectCategory('Coming Soon')" class="pe-4"><a href="#">Coming Soon</a></li>
-                    <li @click="cip = selectCategory('Latest Movie')" class="pe-4"><a href="#">Latest Movies</a></li>
-                    <li @click="cip = selectCategory('Top Rating')" class="pe-4"><a href="#">Top Rated</a></li>
-                    <li @click="cip = selectCategory('Tv Series')" class="pe-4"><a href="#">TV Series</a></li>
+                    <li @doSearch="selectCategory" is="vue:category-nav" v-for="(cat, i) in categories" :currentI="currentI" :cat="cat" :i="i"></li>
                 </ul>
                 <div class="d-flex flex-wrap pb-4">
-                    <CardComponent v-for="(show, index) in this.cip" :rounded="false" :show="show" :index="index" :key="show.id"/>
+                    <CardComponent v-for="(show, index) in this.selections" :rounded="false" :show="show" :index="index" :key="show.id"/>
                 </div>
             </div>
         </section>
 </template>
 
 <script>
+
     import { store } from '../data/store';
     import TitleComponent from './TitleComponent.vue';
     import CardComponent from './CardComponent.vue';
+    import CategoryNav from './CategoryNav.vue';
     export default {
         name: 'NewMovieSelect',
         components: {
             TitleComponent,
-            CardComponent
+            CardComponent,
+            CategoryNav
         },
         data(){
             return{
                 store,
-                cip: store.shows.map(show => show),
+                selections: store.shows.map(show => show),
+                categories: [
+                    {
+                        cat: 'All',
+                    },
+                    {
+                        cat: 'Coming Soon',
+                    },
+                    {
+                        cat: 'Latest Movies',
+                    },
+                    {
+                        cat: 'Top Rated',
+                    },
+                    {
+                        cat: 'Tv Series',
+                    },
+                ],
+                currentI: 0
             }
         },
         methods: {
-            selectCategory(category){
-                this.cip = this.store.shows.map(show => show).filter((show) => show.category === category);
-                console.log(this.cip);
-                return this.cip
+            selectCategory(i, category){
+                this.currentI = i;
+                this.selections = this.store.shows.map(show => show).filter((show) => {
+                    if(show.category === category || category === 'All' || category === ''){
+                        return true
+                    }
+                });
             }
         }
     }

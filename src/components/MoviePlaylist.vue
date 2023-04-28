@@ -23,7 +23,7 @@
                 <div class="playlist-bar p-3">
                     <div>
                         <h6>New Movie</h6>
-                        <span>Plying24</span>
+                        <span>Plying {{ playMovie.length }}</span>
                     </div>
                     <div class="playlist-container py-2">
                         <div v-for="show in playMovie" class="d-flex py-2 align-items-center">

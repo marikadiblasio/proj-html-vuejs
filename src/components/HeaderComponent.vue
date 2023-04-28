@@ -1,6 +1,6 @@
 <template>
     <header class="py-4">
-        <div class="container d-flex  align-items-center justify-content-between pt-2 top-header">
+        <div id="top" class="container d-flex  align-items-center justify-content-between pt-2 top-header">
             <div class="d-flex align-items-center">
                 <i class="fa-regular pe-2 fa-envelope"></i>
                 <span>Superhit Top Movie </span>
@@ -55,7 +55,7 @@
                 <p>Lorem ispum is simpl dummy text of the printing and typesetting industrioy. Lorem ipsum hes been the industry standerd dummy text ever since the 1500s, when an unknown</p>
                 <button class="btn rounded-5">Read more</button>
             </div>
-            <div class="extra ms-auto me-4"><i class="fa-solid fa-angle-up"></i></div>
+            <div class="extra ms-auto me-4"><a href="#top"><i class="fa-solid fa-angle-up"></i></a></div>
         </div>
     </header>
 </template>
