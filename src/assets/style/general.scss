@@ -19,9 +19,6 @@ a {
     text-decoration: none;
     // cursor: pointer;
 }
-a:hover {
-    color: $my-contrast;
-}
 .pointer{
     cursor: pointer;
 }
@@ -40,4 +37,8 @@ a:hover {
 //Width and height
 .w-6{
     width: 6rem;
+}
+//Hover
+a:hover {
+    color: $my-contrast;
 }
