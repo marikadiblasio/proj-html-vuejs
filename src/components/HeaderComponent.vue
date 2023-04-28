@@ -27,11 +27,11 @@
         <hr>
         <nav class="container pb-2 d-flex justify-content-between bottom-header">
             <ul class="d-flex">
-                <li  @click="prova"  class="position-relative" v-for="(link, index) in navLinks" :key="index">
+                <li class="position-relative" v-for="(link, index) in navLinks" :key="index">
                     <a :href="link.ref">{{link.title}} 
                         <i v-if="link.caret" class="fa-solid fa-caret-down"></i>
                     </a>
-                    <div :class="isActive ? 'active' : '' " class="drop">
+                    <div class="drop">
                         <ul class="unstyled text-white">
                             <li v-for="n in 6">
                                 <span>{{ link.title + " " + n }}</span>
@@ -65,32 +65,11 @@
     export default {
         name: 'HeaderComponent',
         props: ['brands', 'navLinks'],
-        data(){
-            return{
-                // activeIndex: 2
-                isActive: false
-            }
-        },
         computed: {
             newBrands(){
                 const plus = ['fa-google-plus-g'];
                 return this.brands.concat(plus);
             }
-        },
-        methods:{
-            prova(){
-                // console.log(this.isActive)
-                this.isActive = !this.isActive;
-                // console.log(this.index);
-
-                // this.activeIndex = this.index;
-                // console.log(this.activeIndex);
-                // console.log(this.index);
-                // console.log(this.navLinks);
-            }
-        },
-        mounted(){
-            // console.log(this.activeIndex);
         }
     }
 </script>

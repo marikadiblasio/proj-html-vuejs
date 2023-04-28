@@ -1,6 +1,6 @@
 <template> 
     <div class="col-4 px-3 pb-5 d-flex">
-        <div :style="{background: 'linear-gradient(rgba(24,32,40, 0.60), rgba(24,32,40, 0.60)),url' + '(' + show.image + ')'}" :class="{'active': index === store.activeIndex || !rounded, 'rounded-0': !rounded, 'rounded-4': rounded} " class="my-card position-relative pb-5">
+        <div :style="{backgroundImage: 'url' + '(' + show.image + ')'}" :class="{'active': index === store.activeIndex || !rounded, 'rounded-0': !rounded, 'rounded-4': rounded} " class="my-card position-relative pb-5">
             <div class="perhov" :class="{'active': index === store.activeIndex || !rounded, 'rounded-0': !rounded, 'rounded-4': rounded}">
                 <div class="d-flex justify-content-between pt-3 pe-2">
                     <div class="hours">
@@ -46,8 +46,10 @@
     }
     .my-card{
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
         background-position: right;
+        background-color: grey;
+        background-blend-mode: multiply;
         height: 100%;
         width: 89%;
         display: flex;

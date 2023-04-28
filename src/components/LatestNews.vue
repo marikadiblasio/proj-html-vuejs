@@ -51,8 +51,6 @@
         computed: {
             slicedPosts(){ 
                 return this.store.posts.map(post => post).filter((post, index) => index !== this.activePost);
-                      
-                
             },
         },
         methods:{

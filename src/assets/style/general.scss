@@ -1,6 +1,8 @@
 @use '../partials/variables' as * ;
 @import 'bootstrap/scss/bootstrap.scss';
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,500&display=swap');
+
 $fa-font-path: './webfonts';
 @import '@fortawesome/fontawesome-free/scss/fontawesome.scss';
 @import '@fortawesome/fontawesome-free/scss/solid.scss';
@@ -10,6 +12,7 @@ $fa-font-path: './webfonts';
 body{
     background-color: $my-primary;
     color: $my-tertiary;
+    font-family: $my-font;
 }
 ul {
     list-style: none;
