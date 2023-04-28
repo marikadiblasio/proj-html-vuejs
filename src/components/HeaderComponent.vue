@@ -1,6 +1,6 @@
 <template>
     <header class="py-4">
-        <div id="top" class="container d-flex  align-items-center justify-content-between pt-2 top-header">
+        <div ref="top" id="top" class="container d-flex  align-items-center justify-content-between pt-2 top-header">
             <div class="d-flex align-items-center">
                 <i class="fa-regular pe-2 fa-envelope"></i>
                 <span>Superhit Top Movie </span>
@@ -55,8 +55,9 @@
                 <p>Lorem ispum is simpl dummy text of the printing and typesetting industrioy. Lorem ipsum hes been the industry standerd dummy text ever since the 1500s, when an unknown</p>
                 <button class="btn rounded-5">Read more</button>
             </div>
-            <div class="extra ms-auto me-4"><a href="#top"><i class="fa-solid fa-angle-up"></i></a></div>
         </div>
+        <div @click="this.$refs.top.scrollIntoView" class="extra"><i class="fa-solid fa-angle-up"></i></div>
+
     </header>
 </template>
 
@@ -77,6 +78,7 @@
         },
         methods:{
             prova(){
+                
                 // console.log(this.index);
 
                 // this.activeIndex = this.index;
@@ -180,12 +182,14 @@
         }
     }
     .extra{
-        // @include small-square;
         background-color: $my-tertiary;
         width: 2rem;
         height: 2rem;
-        color: grey;
+        color: $my-secondary;
         text-align: center;
         line-height: 2rem;
+        position: fixed;
+        bottom: 5rem;
+        right: 1rem;
     }
 </style>

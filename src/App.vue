@@ -14,7 +14,7 @@
     components: {
       HeaderComponent,
       MainComponent,
-      FooterComponent
+      FooterComponent,
     },
     data(){
       return{
@@ -82,5 +82,4 @@
 </script>
 
 <style lang="scss" scoped>
-
 </style>
