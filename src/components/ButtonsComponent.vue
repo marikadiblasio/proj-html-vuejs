@@ -18,12 +18,10 @@
         height: 2rem;
     }
     .card-tag:last-child{
-        border-top-left-radius: 15px ;
-        border-bottom-left-radius: 15px ;
+        @include radius-left;
     }
     .card-tag:first-child{
-        border-top-right-radius: 15px ;
-        border-bottom-right-radius: 15px ;
+        @include radius-right;
     }
     .card-tag{
         padding: 5px 20px;

@@ -27,8 +27,7 @@
         <hr>
         <nav class="container pb-2 d-flex justify-content-between bottom-header">
             <ul class="d-flex">
-
-                <li v-for="link in navLinks"><a href="#">{{link.title}} <i v-if="link.caret" class="fa-solid fa-caret-down"></i></a></li>
+                <li v-for="link in navLinks"><a :href="link.ref">{{link.title}} <i v-if="link.caret" class="fa-solid fa-caret-down"></i></a></li>
             </ul>
             <div>
                 <i class="fa-solid position-relative fa-basket-shopping">
@@ -75,23 +74,38 @@
     }
     .fa-facebook-f{
         color: $fb;
+        &:hover{
+            color: $my-contrast;
+        }
     }
     .fa-twitter{
         color: $twit;
+        &:hover{
+            color: $my-contrast;
+        }
     }
     .fa-linkedin-in{
         color: $in;
+        &:hover{
+            color: $my-contrast;
+        }
     }
     .fa-square-instagram{
         color: $insta;
+        &:hover{
+            color: $my-contrast;
+        }
     }
     .fa-google-plus-g{
         color: $g-plus;
+        &:hover{
+            color: $my-contrast;
+        }
 }
     .btn{
-            color: $my-tertiary;
-            background-color: $my-contrast;
-        }
+        color: $my-tertiary;
+        background-color: $my-contrast;
+    }
     .main-header{
         input{
             background-color: $my-primary;
@@ -113,6 +127,11 @@
         .container{
             width: 30%;
             margin-right: 15%;
+
+            button.btn:hover{
+                color: black;
+                background-color: $my-tertiary;
+            }
         }
     }
     .extra{

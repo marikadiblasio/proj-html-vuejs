@@ -25,31 +25,38 @@
         navLinks:[
             {
               title: 'Home',
-              caret: true
+              caret: true,
+              ref: '#'
             },
             {
               title: 'Celebrity',
-              caret: true
+              caret: true,
+              ref: '#'
             },
             {
               title: 'Movie',
-              caret: true
+              caret: true,
+              ref: '#new-movie-slider'
             },
             {
               title: 'Page',
-              caret: true
+              caret: true,
+              ref: '#'
             },
             {
               title: 'Shop',
-              caret: true
+              caret: true,
+              ref: '#'
             },
             {
               title: 'Blog',
-              caret: false
+              caret: false,
+              ref: '#latest-news'
             },
             {
               title: 'Contact Us',
-              caret: false
+              caret: false,
+              ref: '#'
             }
         ],
         bottomLinks: [ 

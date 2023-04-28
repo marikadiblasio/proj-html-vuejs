@@ -20,3 +20,11 @@ $pint: #b00a1b;
     width: 5rem;
     height: 5rem;
 }
+@mixin radius-left{
+    border-top-left-radius: 15px ;
+    border-bottom-left-radius: 15px ;
+}
+@mixin radius-right{
+    border-top-right-radius: 15px ;
+    border-bottom-right-radius: 15px ;
+}

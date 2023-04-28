@@ -1,7 +1,7 @@
 <template>
 <section id="subscription" class="py-5">
             <div class="container py-5">
-                <form class="py-5 text-center">
+                <form @submit.prevent="" class="py-5 text-center">
                     <div class="pt-5">
                         <input type="text" name="first-name" id="first-name" placeholder="First Name">
                         <input type="text" name="last-name" id="last-name" placeholder="Last Name">
@@ -44,6 +44,10 @@
                 padding: 15px 30px;
                 border-radius: 30px;
                 margin-top: 2rem;
+            }
+            button:hover{
+                color: black;
+                background-color: $my-tertiary;
             }
         }
     }

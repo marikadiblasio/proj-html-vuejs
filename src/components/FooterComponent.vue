@@ -90,6 +90,10 @@
         .fa-pinterest-p{
             background-color: $pint;
         }
+        .circle:hover{
+            background-color: transparent;
+            color: $my-contrast;
+        }
         h6 {
             padding-top: 2rem;
             padding-bottom: .5rem;
