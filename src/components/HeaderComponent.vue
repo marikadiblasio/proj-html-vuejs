@@ -27,14 +27,14 @@
         <hr>
         <nav class="container pb-2 d-flex justify-content-between bottom-header">
             <ul class="d-flex">
-                <li class="position-relative" v-for="(link, index) in navLinks" :key="index" @click="prova">
+                <li  @click="prova"  class="position-relative" v-for="(link, index) in navLinks" :key="index">
                     <a :href="link.ref">{{link.title}} 
                         <i v-if="link.caret" class="fa-solid fa-caret-down"></i>
                     </a>
-                    <div class="drop">
+                    <div :class="isActive ? 'active' : '' " class="drop">
                         <ul class="unstyled text-white">
                             <li v-for="n in 6">
-                                <span>{{ link.title + n }}</span>
+                                <span>{{ link.title + " " + n }}</span>
                             </li>
                         </ul>
                     </div>
@@ -68,6 +68,7 @@
         data(){
             return{
                 // activeIndex: 2
+                isActive: false
             }
         },
         computed: {
@@ -78,7 +79,8 @@
         },
         methods:{
             prova(){
-                
+                // console.log(this.isActive)
+                this.isActive = !this.isActive;
                 // console.log(this.index);
 
                 // this.activeIndex = this.index;
@@ -102,10 +104,17 @@
         background-color: black;
         width: 10rem;
         height: fit-content;
-        text-align: left;
+        text-align: start;
         opacity: 0;
+        border-radius: 3%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+        li{
+            padding-left: 0;
+        }
     }
-    li.position-relative:hover .drop{
+    li.position-relative:hover .drop, .drop.active{
         opacity: 1;
     }
     li.position-relative.active{

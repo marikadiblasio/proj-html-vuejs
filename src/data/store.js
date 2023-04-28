@@ -123,6 +123,7 @@ export const store = reactive({
     ],
     posts: [
         {
+            id: 20,
             image: '/imgs/assets/blog-300x300.jpg',
             smallImage: '/imgs/assets/blog-150x150.jpg',
             title: 'Actor The concept Movie High Concept Theory See The Post',
@@ -131,6 +132,7 @@ export const store = reactive({
             date: 'April 14, 2020',    
         },
         {
+            id: 21,
             image: '/imgs/assets/blog2-300x300.jpg',
             smallImage: '/imgs/assets/blog2-150x150.jpg',
             title: 'Consequat Nam Lectus Nibh Aucibus It has Turpis',
@@ -139,6 +141,7 @@ export const store = reactive({
             date: 'April 14, 2020',    
         },
         {
+            id: 22,
             image: '/imgs/assets/blog3-300x300.jpg',
             smallImage: '/imgs/assets/blog3-150x150.jpg',
             title: 'Nam Lectus Nibh Consequat Aucibus Turpis It Has',
@@ -147,6 +150,7 @@ export const store = reactive({
             date: 'April 14, 2020',    
         },
         {
+            id: 23,
             image: '/imgs/assets/blog4-300x300.jpg',
             smallImage: '/imgs/assets/blog4-150x150.jpg',
             title: 'give Me The Head Of Alfredo Garcia Best Movie In',
@@ -155,6 +159,7 @@ export const store = reactive({
             date: 'April 14, 2020',    
         },
         {
+            id: 24,
             image: '/imgs/assets/blog5-300x300.jpg',
             smallImage: '/imgs/assets/blog5-150x150.jpg',
             title: 'Pump Action Interaction English Action Movie (2020)',

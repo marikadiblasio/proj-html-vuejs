@@ -1,8 +1,11 @@
 <template>
     <section id="latest-news">
+        <div class="container">
+            <TitleComponent title="Latest News" subtitle="Lorem ipsum dummy text eiusque cum dolor"/>
+        </div>
         <div class="container pt-5 justify-content-between d-flex">
             <div class="w-50 p-2">
-                <div class="big-square p-relative">
+                <div :style="{backgroundImage: 'url' + '(' + store.posts[activePost].image + ')'}" class="big-square p-relative">
                     <div class="perhov">
                         <div class="date">{{ store.posts[activePost].date }}</div>
                         <div class="bottom-card">
@@ -14,7 +17,7 @@
             </div>
             <div class="w-50 p-2">
                 <div class="d-flex g-3 justify-content-between flex-wrap">
-                    <div  class="smaller-square" v-for="(post, index) in slicedPosts" :key="index" :style="{backgroundImage: 'url' + '(' + post.image + ')'}">
+                    <div @click="getIndex(post.id)" class="smaller-square" v-for="(post, index) in slicedPosts" :key="post.id" :style="{backgroundImage: 'url' + '(' + post.image + ')'}">
                         <div class="perhov">
                             <div class="date">{{ post.date }}</div>
                             <div class="bottom-card">
@@ -47,8 +50,15 @@
         },
         computed: {
             slicedPosts(){ 
-                return this.store.posts.slice(1,5);
+                return this.store.posts.map(post => post).filter((post, index) => index !== this.activePost);
+                      
+                
             },
+        },
+        methods:{
+            getIndex(id){
+            this.activePost = this.store.posts.findIndex((post) => post.id === id);
+            }
         }
     }
 </script>
