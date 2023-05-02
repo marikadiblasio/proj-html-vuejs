@@ -20,7 +20,6 @@ ul {
 a {
     color: $my-tertiary;
     text-decoration: none;
-    // cursor: pointer;
 }
 .pointer{
     cursor: pointer;
@@ -42,6 +41,6 @@ a {
     width: 6rem;
 }
 //Hover
-a:hover {
+a:hover, li:hover a {
     color: $my-contrast;
 }

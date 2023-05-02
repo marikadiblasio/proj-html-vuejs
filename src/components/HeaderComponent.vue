@@ -31,7 +31,7 @@
                     <a :href="link.ref">{{link.title}} 
                         <i v-if="link.caret" class="fa-solid fa-caret-down"></i>
                     </a>
-                    <div class="drop">
+                    <div v-if="link.caret" class="drop">
                         <ul class="unstyled text-white">
                             <li v-for="n in 6">
                                 <span>{{ link.title + " " + n }}</span>
@@ -62,6 +62,7 @@
 </template>
 
 <script>
+
     export default {
         name: 'HeaderComponent',
         props: ['brands', 'navLinks'],

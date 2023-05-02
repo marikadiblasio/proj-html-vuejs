@@ -1,5 +1,5 @@
 <template> 
-    <div class="col-4 px-3 pb-5 d-flex">
+    <div class="col-4 align-items-center pb-5 mb-3 d-flex">
         <div :style="{backgroundImage: 'url' + '(' + show.image + ')'}" :class="{'active': index === store.activeIndex || !rounded, 'rounded-0': !rounded, 'rounded-4': rounded} " class="my-card position-relative pb-5">
             <div class="perhov" :class="{'active': index === store.activeIndex || !rounded, 'rounded-0': !rounded, 'rounded-4': rounded}">
                 <div class="d-flex justify-content-between pt-3 pe-2">
@@ -43,6 +43,9 @@
     @use '../assets/partials/variables' as *;
     .col-4{
         height: calc(100vw / 3);
+        width: 380px;
+        padding-left: 20px;
+        // padding-right: 20px;
     }
     .my-card{
         background-repeat: no-repeat;
@@ -79,12 +82,12 @@
         }
     }
     i{
-            color: $my-contrast;
+        color: $my-contrast;
         }
-        .hours{
-            @include radius-right;
-            background-color: $my-contrast;
-            padding: 3px 10px;
-            opacity: 0;
-        }
+    .hours{
+        @include radius-right;
+        background-color: $my-contrast;
+        padding: 3px 10px;
+        opacity: 0;
+    }
 </style>

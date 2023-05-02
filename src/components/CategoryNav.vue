@@ -1,7 +1,7 @@
 <template>
-        <li :key="i"  class="pe-4" @click.prevent="$emit('doSearch', i, cat.cat)">
-            <a :class="currentI === i ? 'my-contrast' : ''" href="#"> {{ cat.cat }} </a>
-        </li>
+    <li :key="i"  class="pe-4" @click.prevent="$emit('doSearch', i, cat.cat)">
+        <a :class="currentI === i ? 'my-contrast' : ''" href="#"> {{ cat.cat }} </a>
+    </li>
 </template>
 <script>
     import { store } from '../data/store';

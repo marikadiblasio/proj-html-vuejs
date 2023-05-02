@@ -1,16 +1,16 @@
 <template>
 <section id="subscription" class="py-5">
-            <div class="container py-5">
-                <form @submit.prevent="" class="py-5 text-center">
-                    <div class="pt-5">
-                        <input type="text" name="first-name" id="first-name" placeholder="First Name">
-                        <input type="text" name="last-name" id="last-name" placeholder="Last Name">
-                        <input type="text" name="email-address" id="email-address" placeholder="Email Address">
-                    </div>
-                    <button type="submit">Subscribe</button>
-                </form>
+    <div class="container py-5">
+        <form @submit.prevent="" class="py-5 text-center">
+            <div class="pt-5">
+                <input type="text" name="first-name" id="first-name" placeholder="First Name">
+                <input type="text" name="last-name" id="last-name" placeholder="Last Name">
+                <input type="text" name="email-address" id="email-address" placeholder="Email Address">
             </div>
-        </section>
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+</section>
 </template>
 
 <script>

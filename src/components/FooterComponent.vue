@@ -105,6 +105,7 @@
                 content: '';
                 padding-top: 1px;
                 border: 1px solid $my-tertiary;
+                background-color: $my-tertiary;
                 left: 0;
                 bottom: 0;
                 width: 20%;

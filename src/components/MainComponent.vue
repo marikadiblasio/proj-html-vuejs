@@ -15,11 +15,6 @@
         <NewMovieSelect />
         <LatestNews />
         <SubscriptionForm />
-        <!-- <section id="subscription" class="py-5">
-            <div class="container">
-                <form></form>
-            </div>
-        </section> -->
     </div>
 </template>
 
